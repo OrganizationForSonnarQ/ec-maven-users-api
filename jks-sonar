@@ -29,6 +29,7 @@ pipeline {
                 }
             }
             steps {
+                echo " repo_name: ${env.REPO_NAME}"
                 withSonarQubeEnv("${env.SONAR_SERVER}") {
                     sh """
                         mvn sonar:sonar \
