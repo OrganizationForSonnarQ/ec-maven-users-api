@@ -18,8 +18,8 @@ pipeline {
             }
             steps {
                 sh 'mvn clean package -DskipTests'
-            }
-            echo " ==> repo_name: ${env.REPO_NAME}"
+                echo " ==> repo_name: ${env.REPO_NAME}"
+            }           
         }
 
         stage('Análisis SonarQube') {
