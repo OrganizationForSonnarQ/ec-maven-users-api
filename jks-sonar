@@ -34,7 +34,7 @@ pipeline {
                 withSonarQubeEnv("${env.SONAR_SERVER}") {
                     sh """
                         mvn sonar:sonar \
-                        -Dsonar.organization=OrganizationForSonnarQ \
+                        -Dsonar.organization=organizationforsonnarq \
                         -Dsonar.projectKey=${env.REPO_NAME} \
                         -Dsonar.projectName=${env.REPO_NAME} \
                         -Dsonar.sources=src/main/java \
